@@ -1,7 +1,7 @@
 package util;
 
 public abstract class Node {
-    private Condition preCondition;
+    private ICondition preCondition;
 
     public abstract void addChild(Node node);
 

@@ -1,11 +1,11 @@
 package util;
 
-public class BehaviorTree {
-  private Node root;
+import java.util.concurrent.Executor;
 
-  public BehaviorTree(Node root) {
-    this.root = root;
-  }
+public class BehaviorTree {
+  private AbstractNode root;
+
+  private Executor executor;
 
   public void tick() {
     root.tick();
@@ -15,8 +15,7 @@ public class BehaviorTree {
     return root != null ? true : false;
   }
 
-  public void setRoot(Node inNode) {
+  public void setRoot(AbstractNode inNode) {
     root = inNode;
   }
-
 }
